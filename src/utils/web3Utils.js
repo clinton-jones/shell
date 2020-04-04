@@ -147,7 +147,7 @@ export const getContracts = function (web3) {
       new web3.eth.Contract(erc20ABI, cdaiAddress),
       new web3.eth.Contract(erc20ABI, usdcAddress),
       new web3.eth.Contract(erc20ABI, cusdcAddress),
-      new web3.eth.Contract(usdtABI, usdtAddress),
+      new web3.eth.Contract(erc20ABI, usdtAddress),
       new web3.eth.Contract(erc20ABI, ausdtAddress),
       new web3.eth.Contract(erc20ABI, susdAddress),
       new web3.eth.Contract(erc20ABI, asusdAddress)

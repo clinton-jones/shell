@@ -72,6 +72,7 @@ const withWallet = (WrappedComponent) => {
     useEffect(() => {
       if (web3) {
         const contracts = getContracts(web3)
+        window.contracts = contracts
         setContracts(contracts)
       }
     }, [web3])
@@ -83,14 +84,14 @@ const withWallet = (WrappedComponent) => {
       }
     }, [contracts])
 
-    // init balances
-    useEffect(() => {
-      if (account && reserves.totalReserves) {
-        fetchAllowances()
-        fetchBalances()
-        fetchWalletBalances()
-      }
-    }, [account, reserves])
+    // // init balances
+    // useEffect(() => {
+    //   if (account && reserves.totalReserves) {
+    //     fetchAllowances()
+    //     fetchBalances()
+    //     fetchWalletBalances()
+    //   }
+    // }, [account, reserves])
 
     return (
       <>

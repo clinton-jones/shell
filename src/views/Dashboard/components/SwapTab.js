@@ -197,8 +197,8 @@ const SwapTab = () => {
     const tx = loihi.methods[swapType == 'origin' ? 'swapByOrigin' : 'swapByTarget'](
       origin.options.address,
       target.options.address,
-      bnAmount(originInput, origin.decimals),
-      bnAmount(targetInput, target.decimals),
+      bnAmount(originInput, origin.decimals).toFixed(),
+      bnAmount(targetInput, target.decimals).toFixed(),
       Math.floor((Date.now()/1000) + 900)
     )
 

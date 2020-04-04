@@ -52,7 +52,7 @@ const Dashboard = ({
     if (!hasMetamask) {
       return <span style={{ color: '#FFF' }}>Metamask not found.</span>
     }
-    if (networkId !== 1) {
+    if (networkId !== 42) {
       return <NetworkModal />
     }
     if (!isUnlocked) {
